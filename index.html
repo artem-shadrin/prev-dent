@@ -285,21 +285,24 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="about__img">
-                                <img src="./images/main/slide_0.jpg" alt="" loading=lazy
-                                     data-js-modal-open-button='{"src": "#modal-about", "img": "./images/main/slide_0.jpg"}'>
+                                <a href="#about-slide-1">
+                                    <img src="./images/main/slide_0.jpg" alt="" loading=lazy data-fancybox id="about-slide-1">
+                                </a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="about__img">
-                                <img src="./images/main/slide_0.jpg" alt="" loading=lazy
-                                     data-js-modal-open-button=`{"src":"#modal-feedback"}`>
+                                <a href="#about-slide-2">
+                                    <img src="./images/main/slide_0.jpg" alt="" loading=lazy data-fancybox id="about-slide-2">
+                                </a>
                             </div>
                         </div>
                         <div class="about__slider">
                             <div class="swiper-slide">
                                 <div class="about__img">
-                                    <img src="./images/main/slide_0.jpg" alt="" loading=lazy
-                                         data-js-modal-open="{'src': '#modal-about', 'img': './images/main/slide_0.jpg'}">
+                                    <a href="#about-slide-3">
+                                        <img src="./images/main/slide_0.jpg" alt="" loading=lazy data-fancybox id="about-slide-3">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -344,7 +347,7 @@
   <button
     class="button button--transparent"
     type="submit"
-    data-js-modal-open-button = '{"src": "#modal-call"}'
+    data-js-modal-open-button = {"src":"#modal-service","id_service":null}
   
   >
     
@@ -383,7 +386,7 @@
   <button
     class="button button--transparent"
     type="submit"
-    data-js-modal-open-button = '{"src": "#modal-call"}'
+    data-js-modal-open-button = {"src":"#modal-service","id_service":null}
   
   >
     
@@ -422,7 +425,7 @@
   <button
     class="button button--transparent"
     type="submit"
-    data-js-modal-open-button = '{"src": "#modal-call"}'
+    data-js-modal-open-button = {"src":"#modal-service","id_service":0}
   
   >
     
@@ -461,7 +464,7 @@
   <button
     class="button button--transparent"
     type="submit"
-    data-js-modal-open-button = '{"src": "#modal-call"}'
+    data-js-modal-open-button = {"src":"#modal-service","id_service":1}
   
   >
     
@@ -500,7 +503,7 @@
   <button
     class="button button--transparent"
     type="submit"
-    data-js-modal-open-button = '{"src": "#modal-call"}'
+    data-js-modal-open-button = {"src":"#modal-service","id_service":2}
   
   >
     
@@ -539,7 +542,7 @@
   <button
     class="button button--transparent"
     type="submit"
-    data-js-modal-open-button = '{"src": "#modal-call"}'
+    data-js-modal-open-button = {"src":"#modal-service","id_service":3}
   
   >
     
@@ -578,7 +581,7 @@
   <button
     class="button button--transparent"
     type="submit"
-    data-js-modal-open-button = '{"src": "#modal-call"}'
+    data-js-modal-open-button = {"src":"#modal-service","id_service":4}
   
   >
     
@@ -617,7 +620,7 @@
   <button
     class="button button--transparent"
     type="submit"
-    data-js-modal-open-button = '{"src": "#modal-call"}'
+    data-js-modal-open-button = {"src":"#modal-service","id_service":5}
   
   >
     
@@ -656,7 +659,7 @@
   <button
     class="button button--transparent"
     type="submit"
-    data-js-modal-open-button = '{"src": "#modal-call"}'
+    data-js-modal-open-button = {"src":"#modal-service","id_service":6}
   
   >
     
@@ -695,7 +698,7 @@
   <button
     class="button button--transparent"
     type="submit"
-    data-js-modal-open-button = '{"src": "#modal-call"}'
+    data-js-modal-open-button = {"src":"#modal-service","id_service":7}
   
   >
     
@@ -745,42 +748,89 @@
             </h2>
             <div class="newsletter__form">
                 <form action="/" class="form-newsletter" data-js-form novalidate>
+                    <div class="form-newsletter__date">
+                        
+
+
+<div
+        class="input input--underlined"
+        
+>
+    
+        <input
+                type="date"
+                class="input__field"
+        
+        
+        id="form-newsletter__date"
+        name="date"
+        
+            required
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
+    
+
+        
+            <label class="input__label"
+                   for="form-newsletter__date"
+            >
+                Дата приема
+                
+                    *
+                
+            </label>
+        
+</div>
+
+                    </div>
                     <div class="form-newsletter__email">
                         
 
 
 <div
-  class="input input--underlined"
-  data-js-input-validate="email"
+        class="input input--underlined"
+        data-js-input-validate="email"
 >
-  
-    <input
-      type="text"
-      class="input__field"
     
+        <input
+                type="text"
+                class="input__field"
+        
+        
+            data-mask=phone
+        
+        id="form-newsletter__email"
+        name="phone"
+        
+            required
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
     
-      data-mask=phone
-    
-    id="form-newsletter__email"
-    name="phone"
-    
-      required
-    
-    
-    
-    
-      placeholder= " "
-    
-    >
-  
-  <label class="input__label"
-         for="form-newsletter__email"
-  >
-    Телефон для связи
-    
-      *
-    
-  </label>
+
+        
+            <label class="input__label"
+                   for="form-newsletter__email"
+            >
+                Телефон для связи
+                
+                    *
+                
+            </label>
+        
 </div>
 
                     </div>
@@ -1024,7 +1074,7 @@
   <button
     class="button"
     type="submit"
-    data-js-modal-open-button ={"src":"#modal-review"} 
+    data-js-modal-open-button = {"src":"#modal-feedback"}
   
   >
     
@@ -1273,7 +1323,7 @@
   <button
     class="button"
     type="submit"
-    
+    data-js-modal-open-button = {"src":"#modal-call"}
   
   >
     
@@ -1415,7 +1465,7 @@
   <button
     class="button"
     type="submit"
-    
+    data-js-modal-open-button = {"src":"#modal-specialist"}
   
   >
     
@@ -1435,7 +1485,7 @@
   <button
     class="button"
     type="submit"
-    
+    data-js-modal-open-button = {"src":"#modal-feedback"}
   
   >
     
@@ -1476,37 +1526,42 @@
 
 
 <div
-  class="input"
-  data-js-input-validate
+        class="input"
+        data-js-input-validate
 >
-  
-    <input
-      type="text"
-      class="input__field"
     
+        <input
+                type="text"
+                class="input__field"
+        
+        
+            data-mask=fullname
+        
+        id="feedback__name"
+        name="name"
+        
+            required
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
     
-      data-mask=fullname
-    
-    id="feedback__name"
-    name="name"
-    
-      required
-    
-    
-    
-    
-      placeholder= " "
-    
-    >
-  
-  <label class="input__label"
-         for="feedback__name"
-  >
-    ФИО
-    
-      *
-    
-  </label>
+
+        
+            <label class="input__label"
+                   for="feedback__name"
+            >
+                ФИО
+                
+                    *
+                
+            </label>
+        
 </div>
 
                 </div>
@@ -1515,37 +1570,42 @@
 
 
 <div
-  class="input"
-  data-js-input-validate="phone"
+        class="input"
+        data-js-input-validate="phone"
 >
-  
-    <input
-      type="tel"
-      class="input__field"
     
+        <input
+                type="tel"
+                class="input__field"
+        
+        
+            data-mask=phone
+        
+        id="feedback__phone"
+        name="phone"
+        
+            required
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
     
-      data-mask=phone
-    
-    id="feedback__phone"
-    name="phone"
-    
-      required
-    
-    
-    
-    
-      placeholder= " "
-    
-    >
-  
-  <label class="input__label"
-         for="feedback__phone"
-  >
-    Телефон
-    
-      *
-    
-  </label>
+
+        
+            <label class="input__label"
+                   for="feedback__phone"
+            >
+                Телефон
+                
+                    *
+                
+            </label>
+        
 </div>
 
                 </div>
@@ -1554,33 +1614,38 @@
 
 
 <div
-  class="input"
-  data-js-input-validate="email"
+        class="input"
+        data-js-input-validate="email"
 >
-  
-    <input
-      type="email"
-      class="input__field"
     
+        <input
+                type="email"
+                class="input__field"
+        
+        
+            data-mask=email
+        
+        id="feedback__email"
+        name="email"
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
     
-      data-mask=email
-    
-    id="feedback__email"
-    name="email"
-    
-    
-    
-    
-      placeholder= " "
-    
-    >
-  
-  <label class="input__label"
-         for="feedback__email"
-  >
-    Электронная почта
-    
-  </label>
+
+        
+            <label class="input__label"
+                   for="feedback__email"
+            >
+                Электронная почта
+                
+            </label>
+        
 </div>
 
                 </div>
@@ -1589,30 +1654,35 @@
 
 
 <div
-  class="input"
-  
+        class="input"
+        
 >
-  
-    <textarea
-      class="input__field"
-      
-      id="feedback__message"
-      name="message"
     
-    
-    
-    
-      placeholder=" "
-      
-    ></textarea>
+        <textarea
+                class="input__field"
+                
+                id="feedback__message"
+                name="message"
+        
+        
+        
+        
+                placeholder=" "
+                
+        
+        
+        ></textarea>
 
-  
-  <label class="input__label"
-         for="feedback__message"
-  >
-    Сообщение
     
-  </label>
+
+        
+            <label class="input__label"
+                   for="feedback__message"
+            >
+                Сообщение
+                
+            </label>
+        
 </div>
 
                 </div>
@@ -1685,37 +1755,42 @@
 
 
 <div
-  class="input"
-  data-js-input-validate
+        class="input"
+        data-js-input-validate
 >
-  
-    <input
-      type="text"
-      class="input__field"
     
+        <input
+                type="text"
+                class="input__field"
+        
+        
+            data-mask=fullname
+        
+        id="feedback__name"
+        name="name"
+        
+            required
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
     
-      data-mask=fullname
-    
-    id="feedback__name"
-    name="name"
-    
-      required
-    
-    
-    
-    
-      placeholder= " "
-    
-    >
-  
-  <label class="input__label"
-         for="feedback__name"
-  >
-    ФИО
-    
-      *
-    
-  </label>
+
+        
+            <label class="input__label"
+                   for="feedback__name"
+            >
+                ФИО
+                
+                    *
+                
+            </label>
+        
 </div>
 
                 </div>
@@ -1724,37 +1799,42 @@
 
 
 <div
-  class="input"
-  data-js-input-validate="phone"
+        class="input"
+        data-js-input-validate="phone"
 >
-  
-    <input
-      type="tel"
-      class="input__field"
     
+        <input
+                type="tel"
+                class="input__field"
+        
+        
+            data-mask=phone
+        
+        id="feedback__phone"
+        name="phone"
+        
+            required
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
     
-      data-mask=phone
-    
-    id="feedback__phone"
-    name="phone"
-    
-      required
-    
-    
-    
-    
-      placeholder= " "
-    
-    >
-  
-  <label class="input__label"
-         for="feedback__phone"
-  >
-    Телефон
-    
-      *
-    
-  </label>
+
+        
+            <label class="input__label"
+                   for="feedback__phone"
+            >
+                Телефон
+                
+                    *
+                
+            </label>
+        
 </div>
 
                 </div>
@@ -1825,37 +1905,42 @@
 
 
 <div
-  class="input"
-  data-js-input-validate
+        class="input"
+        data-js-input-validate
 >
-  
-    <input
-      type="text"
-      class="input__field"
     
+        <input
+                type="text"
+                class="input__field"
+        
+        
+            data-mask=fullname
+        
+        id="feedback__name"
+        name="name"
+        
+            required
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
     
-      data-mask=fullname
-    
-    id="feedback__name"
-    name="name"
-    
-      required
-    
-    
-    
-    
-      placeholder= " "
-    
-    >
-  
-  <label class="input__label"
-         for="feedback__name"
-  >
-    ФИО
-    
-      *
-    
-  </label>
+
+        
+            <label class="input__label"
+                   for="feedback__name"
+            >
+                ФИО
+                
+                    *
+                
+            </label>
+        
 </div>
 
                 </div>
@@ -1864,37 +1949,42 @@
 
 
 <div
-  class="input"
-  data-js-input-validate="phone"
+        class="input"
+        data-js-input-validate="phone"
 >
-  
-    <input
-      type="tel"
-      class="input__field"
     
+        <input
+                type="tel"
+                class="input__field"
+        
+        
+            data-mask=phone
+        
+        id="feedback__phone"
+        name="phone"
+        
+            required
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
     
-      data-mask=phone
-    
-    id="feedback__phone"
-    name="phone"
-    
-      required
-    
-    
-    
-    
-      placeholder= " "
-    
-    >
-  
-  <label class="input__label"
-         for="feedback__phone"
-  >
-    Телефон
-    
-      *
-    
-  </label>
+
+        
+            <label class="input__label"
+                   for="feedback__phone"
+            >
+                Телефон
+                
+                    *
+                
+            </label>
+        
 </div>
 
                 </div>
@@ -1903,37 +1993,42 @@
 
 
 <div
-  class="input"
-  data-js-input-validate="email"
+        class="input"
+        data-js-input-validate="email"
 >
-  
-    <input
-      type="email"
-      class="input__field"
     
+        <input
+                type="email"
+                class="input__field"
+        
+        
+            data-mask=email
+        
+        id="feedback__email"
+        name="email"
+        
+            required
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
     
-      data-mask=email
-    
-    id="feedback__email"
-    name="email"
-    
-      required
-    
-    
-    
-    
-      placeholder= " "
-    
-    >
-  
-  <label class="input__label"
-         for="feedback__email"
-  >
-    Электронная почта
-    
-      *
-    
-  </label>
+
+        
+            <label class="input__label"
+                   for="feedback__email"
+            >
+                Электронная почта
+                
+                    *
+                
+            </label>
+        
 </div>
 
                 </div>
@@ -1945,35 +2040,45 @@
                             <option value="3">3</option>
                         </select>
                     </div>
-                    <div class="form-feedback__message">
+                    <div class="form-feedback__date">
                         
 
 
 <div
-  class="input"
-  
+        class="input"
+        
 >
-  
-    <textarea
-      class="input__field"
-      
-      id="feedback__message"
-      name="message"
     
+        <input
+                type="date"
+                class="input__field"
+        
+        
+        id="form-newsletter__date"
+        name="date"
+        
+            required
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
     
-    
-    
-      placeholder=" "
-      
-    ></textarea>
 
-  
-  <label class="input__label"
-         for="feedback__message"
-  >
-    Сообщение
-    
-  </label>
+        
+            <label class="input__label"
+                   for="form-newsletter__date"
+            >
+                Дата приема
+                
+                    *
+                
+            </label>
+        
 </div>
 
                     </div>
@@ -2032,6 +2137,191 @@
 
 </div>
 
+<div class="modal modal--call" id="modal-service" data-js-modal>
+    <header class="modal__header">
+        <div class="modal__title h3">
+            Заказать звонок
+        </div>
+    </header>
+    <div class="modal__body">
+        <form action="/" class="form-call" data-js-form novalidate>
+            <span class="form-call__legend">Оставьте Ваши данные, наш специалист свяжется с Вами в ближайшее время.</span>
+            <fieldset class="form-call__fieldset">
+                <div class="form-call__name">
+                    
+
+
+<div
+        class="input"
+        data-js-input-validate
+>
+    
+        <input
+                type="text"
+                class="input__field"
+        
+        
+            data-mask=fullname
+        
+        id="feedback__name"
+        name="name"
+        
+            required
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
+    
+
+        
+            <label class="input__label"
+                   for="feedback__name"
+            >
+                ФИО
+                
+                    *
+                
+            </label>
+        
+</div>
+
+                </div>
+                <div class="form-call__phone">
+                    
+
+
+<div
+        class="input"
+        data-js-input-validate="phone"
+>
+    
+        <input
+                type="tel"
+                class="input__field"
+        
+        
+            data-mask=phone
+        
+        id="feedback__phone"
+        name="phone"
+        
+            required
+        
+        
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
+    
+
+        
+            <label class="input__label"
+                   for="feedback__phone"
+            >
+                Телефон
+                
+                    *
+                
+            </label>
+        
+</div>
+
+                </div>
+                <div class="form-feedback__right">
+                    <div class="form-feedback__service">
+                        
+
+
+<div
+        class="input"
+        
+>
+    
+        <input
+                type="text"
+                class="input__field"
+        
+        
+        id="service-id"
+        name="service"
+        
+        
+            hidden
+        
+        
+            disabled
+        
+        
+        
+        
+            placeholder= " "
+        
+        >
+    
+
+        
+</div>
+
+                    </div>
+                </div>
+            </fieldset>
+            <footer class="form-call__footer">
+                <div class="form-call__privacy">
+                    
+
+
+<label class="checkbox"
+  >
+  <input type="checkbox"
+         name="privacy"
+         id="form-feedback__privacy"
+  
+  
+  
+         required
+    
+         class="checkbox__input">
+  <span class="checkbox__emulator"></span>
+  <span class="checkbox__label"> Согласен (согласна) с политикой конфиденциальности</span>
+</label>
+                </div>
+                <div class="form-call__submit">
+                    
+
+
+
+  <button
+    class="button"
+    type="submit"
+    
+  
+  >
+    
+      
+			<span class="button__label">Отправить</span>
+			
+        <svg class="button__icon i-icon i-icon-arrow">
+          <use href="#icon-arrow"></use>
+				</svg>
+      
+    
+  </button>
+
+
+                </div>
+            </footer>
+        </form>
+    </div>
+
+</div>
 <div class="mobile-menu" data-js-mobile-menu>
   <ul class="mobile-menu__list">
     
